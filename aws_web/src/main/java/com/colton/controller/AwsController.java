@@ -49,7 +49,8 @@ public class AwsController {
 
     @ApiOperation("download file from aws S3")
     @PostMapping("download")
-    public byte[] download(@RequestParam("fileName") String fileName, @RequestParam("token") String token, @RequestParam(defaultValue = "coltoncheng") String bucketName) throws MalformedURLException {
+    public byte[] download(@RequestParam("fileName") String fileName, @RequestParam("token") String token, @RequestParam(defaultValue = "awsbatchdemomw62304") String bucketName) throws MalformedURLException {
+        log.info("bucketName is :" + bucketName);
         if (validateToken(fileName, token)) {
             return awsService.download(fileName, bucketName);
         }
