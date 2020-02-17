@@ -33,4 +33,4 @@ fi
 sudo gpasswd -a ${USER} docker
 sudo systemctl restart docker
 
-git clone https://github.com/chengxinjing/coltonsvc.git
+git clone https://github.com/xwolf-wang/coltonsvc.git
